@@ -10,7 +10,7 @@ permissions:
     contents: read
 
 jobs:
-    build:
+    analyse:
 
         runs-on: ubuntu-latest
 
