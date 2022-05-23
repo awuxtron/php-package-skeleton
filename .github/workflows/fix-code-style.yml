@@ -1,3 +1,5 @@
+name: Check & fix styling
+
 on:
     push:
         branches: [ main ]
