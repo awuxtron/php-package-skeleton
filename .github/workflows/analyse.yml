@@ -46,4 +46,4 @@ jobs:
 
             -
                 name: Run Code Static Analysis
-                run: composer analyse
+                run: composer analyse --  --error-format=github
