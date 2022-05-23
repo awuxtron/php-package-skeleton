@@ -1,0 +1,23 @@
+name: Code Static Analysis
+
+on: [ push ]
+
+jobs:
+    analyse:
+        runs-on: ubuntu-latest
+
+        steps:
+            -
+                uses: actions/checkout@v3
+
+            -
+                name: Install composer dependencies
+                uses: MilesChou/composer-action/8.1@master
+                with:
+                    args: install
+
+            -
+                name: Run code analyse
+                uses: MilesChou/composer-action/8.1@master
+                with:
+                    args: analyse
