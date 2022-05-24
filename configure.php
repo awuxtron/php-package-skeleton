@@ -24,15 +24,10 @@ $application->add(
             $this->input = $input;
             $this->output = $output;
 
-            if (!file_exists($g = __DIR__ . '/.github')) {
-                rename(__DIR__ . '/stubs/github', $g);
-            }
+            $stub = 'cp -r -f ' . escapeshellarg(__DIR__ . '/stubs/*') . ' ' . escapeshellarg(__DIR__);
+            $stub .= ' && rm -rf ' . escapeshellarg(__DIR__ . '/stubs');
 
-            if (!file_exists($t = __DIR__ . '/tests')) {
-                rename(__DIR__ . '/stubs/tests', $t);
-            }
-
-            $this->exec('rm -rf stubs');
+            $this->exec($stub);
 
             $author = $this->ask('Author Name', $this->exec('git config user.name'));
             $email = $this->ask('Author Email', $this->exec('git config user.email'));
