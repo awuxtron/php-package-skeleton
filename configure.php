@@ -24,10 +24,11 @@ $application->add(
             $this->input = $input;
             $this->output = $output;
 
-            $stub = 'cp -r -f ' . escapeshellarg(__DIR__ . '/stubs/*') . ' ' . escapeshellarg(__DIR__);
+            $stub = 'cp -r -f ' . escapeshellarg(__DIR__ . '/stubs') . ' ' . escapeshellarg(__DIR__);
             $stub .= ' && rm -rf ' . escapeshellarg(__DIR__ . '/stubs');
 
             $this->exec($stub);
+            rename(__DIR__ . '/github', __DIR__ . '/.github');
 
             $author = $this->ask('Author Name', $this->exec('git config user.name'));
             $email = $this->ask('Author Email', $this->exec('git config user.email'));
