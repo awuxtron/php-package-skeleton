@@ -24,6 +24,16 @@ $application->add(
             $this->input = $input;
             $this->output = $output;
 
+            if (!file_exists($g = __DIR__ . '/.github')) {
+                rename(__DIR__ . '/stubs/github', $g);
+            }
+
+            if (!file_exists($t = __DIR__ . '/tests')) {
+                rename(__DIR__ . '/stubs/tests', $t);
+            }
+
+            $this->exec('rm -rf stubs');
+
             $author = $this->ask('Author Name', $this->exec('git config user.name'));
             $email = $this->ask('Author Email', $this->exec('git config user.email'));
             $vendor = $this->ask('Author Username', $this->getDefaultUsername());
