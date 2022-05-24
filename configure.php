@@ -33,12 +33,13 @@ $application->add(
             $author = $this->ask('Author Name', $this->exec('git config user.name'));
             $email = $this->ask('Author Email', $this->exec('git config user.email'));
             $vendor = $this->ask('Author Username', $this->getDefaultUsername());
-            $name = $this->ask('Package Name', $this->title($slug = $this->slugify(basename((string) getcwd()))));
-            $package = $this->ask('Package Slug', $slug);
+            $name = $this->ask('Package Name', $this->title($this->slugify(basename((string) getcwd()))));
+            $package = $this->ask('Package Slug', $this->slugify($name));
             $description = $this->ask('Package Description', "This is my package {$name}.");
             $namespace = $this->ask('Package Namespace', $this->getDefaultNamespace($vendor, $package));
+            $branch = $this->ask('Default git branch', 'main');
 
-            $info = compact('author', 'email', 'vendor', 'package', 'name', 'description', 'namespace');
+            $info = compact('author', 'email', 'vendor', 'package', 'name', 'description', 'namespace', 'branch');
 
             $this->replaceComposer($info);
 
@@ -49,7 +50,7 @@ $application->add(
             }
 
             if (!file_exists(__DIR__ . '/.git') && $this->confirm('Init git repository?', true)) {
-                $this->exec('git init');
+                $this->exec('git init -b ' . $branch);
             }
 
             $this->exec('composer update');
