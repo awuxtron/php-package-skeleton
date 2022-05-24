@@ -24,7 +24,7 @@ $application->add(
             $this->input = $input;
             $this->output = $output;
 
-            $stub = 'cp -r -f ' . escapeshellarg(__DIR__ . '/stubs') . ' ' . escapeshellarg(__DIR__);
+            $stub = 'cp -r -f ' . escapeshellarg(__DIR__ . '/stubs/') . ' ' . escapeshellarg(__DIR__);
             $stub .= ' && rm -rf ' . escapeshellarg(__DIR__ . '/stubs');
 
             $this->exec($stub);
