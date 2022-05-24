@@ -14,13 +14,13 @@ researchers.
 If you believe you've found a security issue in software that is maintained in this repository, we encourage you to
 notify us.
 
-| Version | In scope | Source code                            |
-|---------|----------|----------------------------------------|
-| latest  | ✅        | https://github.com/{{vendor}}/{{name}} |
+| Version | In scope | Source code                               |
+|---------|----------|-------------------------------------------|
+| latest  | ✅        | https://github.com/{{vendor}}/{{package}} |
 
 ## How to Submit a Report
 
-To submit a vulnerability report, please contact us at {{email}}. Your submission will be reviewed and
+To submit a vulnerability report, please contact us at `{{email}}`. Your submission will be reviewed and
 validated by a member of our team.
 
 ## Safe Harbor

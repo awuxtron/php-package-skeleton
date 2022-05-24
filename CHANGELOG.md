@@ -1,3 +1,3 @@
 # Changelog
 
-All notable changes to `{{name_kebab}}` will be documented in this file.
+All notable changes to `{{vendor}}/{{package}}` will be documented in this file.
