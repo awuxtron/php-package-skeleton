@@ -9,9 +9,9 @@
     <a href="https://php.net"><img alt="PHP Version Support" src="https://img.shields.io/packagist/php-v/{{vendor}}/{{package}}?style=flat-square"></a>
     <a href="https://packagist.org/packages/{{vendor}}/{{package}}"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/{{vendor}}/{{package}}?style=flat-square"></a>
     <a href="https://packagist.org/packages/{{vendor}}/{{package}}"><img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/{{vendor}}/{{package}}?style=flat-square"></a>
-    <a href="https://github.com/{{vendor}}/{{package}}/actions/workflows/check-code-style.yml"><img alt="Code style check status" src="https://img.shields.io/github/workflow/status/{{vendor}}/{{package}}/fix-code-style?label=code%20style&style=flat-square"></a>
-    <a href="https://github.com/{{vendor}}/{{package}}/actions/workflows/analyse.yml"><img alt="Code Static Analysis Status" src="https://img.shields.io/github/workflow/status/{{vendor}}/{{package}}/analyse?label=analyse&style=flat-square"></a>
-    <a href="https://github.com/{{vendor}}/{{package}}/actions/workflows/run-tests.yml"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/{{vendor}}/{{package}}/run-tests?label=tests&style=flat-square"></a>
+    <a href="https://github.com/{{vendor}}/{{package}}/actions/workflows/fix-code-style.yml"><img alt="Code style check & fix status" src="https://img.shields.io/github/workflow/status/{{vendor}}/{{package}}/Check%20&%20fix%20styling?label=code%20style&style=flat-square"></a>
+    <a href="https://github.com/{{vendor}}/{{package}}/actions/workflows/analyse.yml"><img alt="Code Static Analysis Status" src="https://img.shields.io/github/workflow/status/{{vendor}}/{{package}}/Code%20Static%20Analysis?label=analyse&style=flat-square"></a>
+    <a href="https://github.com/{{vendor}}/{{package}}/actions/workflows/run-tests.yml"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/{{vendor}}/{{package}}/Tests?label=tests&style=flat-square"></a>
 </p>
 
 ## About
