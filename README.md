@@ -59,7 +59,7 @@ known issues).
 
 ## Contributing
 
-Please see [CONTRIBUTING](../../.github/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
