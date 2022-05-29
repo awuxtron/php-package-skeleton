@@ -28,7 +28,9 @@ $application->add(
             $stub .= ' && rm -rf ' . escapeshellarg(__DIR__ . '/stubs');
 
             $this->exec($stub);
+
             rename(__DIR__ . '/github', __DIR__ . '/.github');
+            rename(__DIR__ . '/CHANGELOG.md.stub', __DIR__ . '/CHANGELOG.md');
 
             $author = $this->ask('Author Name', $this->exec('git config user.name'));
             $email = $this->ask('Author Email', $this->exec('git config user.email'));
