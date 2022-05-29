@@ -30,6 +30,8 @@ $application->add(
             $this->exec($stub);
 
             rename(__DIR__ . '/github', __DIR__ . '/.github');
+            rename(__DIR__ . '/.editorconfig.stub', __DIR__ . '/.editorconfig');
+            rename(__DIR__ . '/.gitattributes.stub', __DIR__ . '/.gitattributes');
             rename(__DIR__ . '/CHANGELOG.md.stub', __DIR__ . '/CHANGELOG.md');
 
             $author = $this->ask('Author Name', $this->exec('git config user.name'));
